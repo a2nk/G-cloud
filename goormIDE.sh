@@ -1,4 +1,4 @@
-sudo adduser akuhnet --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
+sudo adduser aank --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
 echo "aank:LinggaHosting" | sudo chpasswd
 sudo usermod -aG sudo,adm aank
 apt update
