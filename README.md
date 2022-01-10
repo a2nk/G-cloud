@@ -1,1 +1,1 @@
-Bash script RDP for # G-cloud
+# Bash script RDP for G-cloud
