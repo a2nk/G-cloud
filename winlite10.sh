@@ -9,11 +9,11 @@ echo "Installing QEMU (2-3m)..."
 sudo apt install qemu-system-x86 curl -y > /dev/null 2>&1
 echo Downloading Windows Disk...
 curl -L -o lite10.qcow2 https://bit.ly/32OIl8Y
-echo "Windows 10 x64 Lite On Google Colab"
+echo "Windows 10 x64 Lite On Gitpod, GCloud and GColab"
 echo Your VNC IP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "Note: Use Right-Click Or Ctrl+C To Copy"
 echo "Please Keep this Tab to Open, Maximum Time 50h"
 echo "Support YT Channel-> Aank is ME"
 echo "LinK: https://aank.me/Youtube"
-sudo qemu-system-x86_64 -vnc :0 -hda lite10.qcow2  -smp cores=2  -m 8192M -machine usb=on -device usb-tablet > /dev/null 2>&1
+sudo qemu-system-x86_64 -vnc :0 -hda lite10.qcow2  -smp cores=4  -m 8192M -machine usb=on -device usb-tablet > /dev/null 2>&1
