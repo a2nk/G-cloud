@@ -16,5 +16,5 @@ echo "Note: Use Right-Click Or Ctrl+C To Copy"
 echo "Please Keep this Tab to Open, Maximum Time 50h"
 echo "Support YT Channel-> Aank is ME"
 echo "LinK: https://aank.me/Youtube"
-sudo qemu-system-x86_64 -vnc :0 -hda win7.img  -smp cores=2  -m 8192M -machine usb=on -device usb-tablet > /dev/null 2>&1
+sudo qemu-system-x86_64 -vnc :0 -hda win7.img  -smp cores=2  -m 8192M -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 sleep 43210
