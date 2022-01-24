@@ -16,5 +16,5 @@ echo "Note: Use Right-Click Or Ctrl+C To Copy"
 echo "Please Keep this Tab to Open, Maximum Time 50h"
 echo "Support YT Channel-> Aank is ME"
 echo "LinK: https://aank.me/Youtube"
-sudo qemu-system-x86_64 -vnc :0 -hda win7.img  -smp cores=2  -m 8192M -net user,hostfwd=tcp::3388-:3389 -machine usb=on -device usb-tablet > /dev/null 2>&1
-sleep 43210
+sudo qemu-system-x86_64 -vnc :0 -hda win7.img  -smp cores=2  -m 8192M -machine usb=on -device usb-tablet > /dev/null 2>&1
+sleep 49210
