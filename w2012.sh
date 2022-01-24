@@ -1,7 +1,8 @@
 apt-get update
 echo "Download windows files"
 wget -O w2012.gz https://go.aank.me/win/WS2012-LinggaHosting.gz
-gunzip --keep w2012.gz
+gunzip w2012.gz
+echo "Wait..."
 mv w2012 w2012.img
 rm -rf ngrok  ngrok.zip  ng.sh > /dev/null 2>&1
 wget -O ng.sh https://bit.ly/GCngrok > /dev/null 2>&1
@@ -23,9 +24,9 @@ read -p "choose ngrok region: " CRP
 clear
 echo Downloading files from aank.me
 apt-get install qemu-system-x86 -y
-echo "Wait"
+echo "Wait..."
 echo "Starting Windows"
-qemu-system-x86_64 -hda w2012.img -m 4G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
+qemu-system-x86_64 -hda w2012.img -m 2G -smp cores=2 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 clear
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
