@@ -1,4 +1,5 @@
-
+#! /bin/bash
+# Make Instance Ready for Remote Desktop or RDP
 apt-get update
 echo "Download windows files"
 wget -O w2019.gz https://bit.ly/W2019-Gitpod
