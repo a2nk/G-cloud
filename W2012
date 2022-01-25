@@ -1,7 +1,7 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
-rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 apt-get update
+rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
 wget -O w2012.gz https://bit.ly/W2012-Gitpod
 gunzip w2012.gz
