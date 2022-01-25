@@ -1,10 +1,8 @@
-#! /bin/bash
-# Make Instance Ready for Remote Desktop or RDP
-rm -rf w2019 w2019.img w2019.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 apt-get update
 echo "===================================="
 echo "Download windows files"
 echo "===================================="
+rm -rf w2019 w2019.img w2019.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 curl -L -o w2019.gz https://bit.ly/W2019-Gitpod
 gunzip w2019.gz
 echo "===================================="
