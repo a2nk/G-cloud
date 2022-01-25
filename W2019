@@ -39,7 +39,7 @@ echo "Password: Lingg@H0sting"
 echo "===================================="
 echo "===================================="
 echo "You got FREE RDP now"
-echo "RDP runs up to 50 hours"
+echo "RDP runs up to 12 hours"
 echo "Support YT Channel-> Aank is ME, thankyou"
 echo "Link-> https://aank.me/Youtube"
 echo "===================================="
@@ -63,3 +63,4 @@ printf """$c$b
     $r  Support YT Channel-> Aank is ME © 2022 $c https://aank.me/Youtube 
           
 $endc$enda""";
+sleep 43200
