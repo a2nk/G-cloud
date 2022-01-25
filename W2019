@@ -8,7 +8,7 @@ gunzip w2019.gz
 echo "Wait..."
 echo "I m Working Now.."
 mv w2019 w2019.img
-wget -O ng.sh https://bit.ly/GCngrok > /dev/null 2>&1
+wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
 clear
