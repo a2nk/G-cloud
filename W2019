@@ -1,7 +1,6 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
-sudo su
-rm -rf w2019 w2019.img w2019.gz
+rm -rf w2019 w2019.img w2019.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 apt-get update
 echo "Download windows files"
 wget -O w2019.gz https://bit.ly/W2019-Gitpod
@@ -9,7 +8,6 @@ gunzip w2019.gz
 echo "Wait..."
 echo "I m Working Now.."
 mv w2019 w2019.img
-rm -rf ngrok  ngrok.zip  ng.sh > /dev/null 2>&1
 wget -O ng.sh https://bit.ly/GCngrok > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
@@ -41,8 +39,8 @@ echo "Password: Lingg@H0sting"
 echo "===================================="
 echo "===================================="
 echo "You got FREE RDP now"
-echo "Wait 2 - 3 minut for finishing bot"
-echo "RDP runs up to 12 hours"
+echo "Wait 1 - 3 minut for finishing bot"
+echo "RDP run up to 50 hours"
 echo "Support YT Channel-> Aank is ME, thankyou"
 echo "Link-> https://aank.me/Youtube"
 echo "===================================="
