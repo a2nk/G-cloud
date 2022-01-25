@@ -15,21 +15,19 @@ mv w2019 w2019.img
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip &>/dev/null &
 unzip ngrok-stable-linux-amd64.zip1 &>/dev/null &
-read -p "Ctrl + V Authtoken: " CRP 
+read -p "Ctrl + V Ngrok Authtoken: " CRP 
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp 3388 &>/dev/null &
 ./ngrok tcp 3388 &>/dev/null &
 clear
 echo "===================================="
-echo Downloading files from aank.me
+echo "Downloading files from aank.me"
 echo "===================================="
 apt-get install qemu > /dev/null 2>&1
 echo "===================================="
 echo "Wait..."
 echo "Starting Windows"
 echo "===================================="
-qemu-system-x86_64 -hda w2019.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
-clear
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
@@ -61,4 +59,5 @@ printf """$c$b
     $r  Support YT Channel-> Aank is ME © 2022 $c https://aank.me/Youtube 
           
 $endc$enda""";
+qemu-system-x86_64 -hda w2019.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic  > /dev/null 2>&1
 sleep 43200
