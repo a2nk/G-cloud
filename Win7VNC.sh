@@ -22,12 +22,6 @@ echo "Please Don't Close this Tab"
 echo "Support YT Channel-> Aank is ME"
 echo "LinK: https://aank.me/Youtube"
 sudo qemu-system-x86_64 -vnc :0 -hda win7.img  -smp cores=2  -m 8192M -machine usb=on -device usb-tablet > /dev/null 2>&1
-b='\033[1m'
-r='\E[31m'
-g='\E[32m'
-c='\E[36m'
-endc='\E[0m'
-enda='\033[0m'
 # Branding
 printf """$c$b
  
@@ -39,5 +33,4 @@ printf """$c$b
 ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝
     $r  Support YT Channel-> Aank is ME © 2022 $c https://aank.me/Youtube 
           
-$endc$enda""";
 sleep 43200
