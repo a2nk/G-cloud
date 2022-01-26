@@ -1,1 +1,3 @@
-# Bash script RDP for G-cloud
+# Bash script RDP
+https://linggahosting.com
+https://aank.me/Youtube
