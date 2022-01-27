@@ -34,7 +34,14 @@ echo "Wait 1 minute and next open RDC to connect"
 echo "===================================="
 echo "===================================="
 docker run -it -p 3388:3389 danchitnis/xrdp:fedora-xfce root 123 yes > /dev/null 2>&1
+b='\033[1m'
+r='\E[31m'
+g='\E[32m'
+c='\E[36m'
+endc='\E[0m'
+enda='\033[0m'
 # Branding
+
 printf """$c$b
  
 ██╗     ██╗███╗   ██╗ ██████╗  ██████╗  █████╗ ██╗  ██╗ ██████╗ ███████╗████████╗██╗███╗   ██╗ ██████╗ 
@@ -45,3 +52,4 @@ printf """$c$b
 ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝
     $r  Support YT Channel-> Aank is ME © 2022 $c https://aank.me/Youtube 
           
+$endc$enda""";
