@@ -3,7 +3,7 @@
 apt-get update
 rm -rf win7.qcow2 win7 win7.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O win7.gz https://bit.ly/a2nk-Win7Ult
+wget -O win7.gz http://52.221.192.24/w7.qcow2.gz
 gunzip win7.gz
 echo "Wait..."
 echo "I m Working Now.."
