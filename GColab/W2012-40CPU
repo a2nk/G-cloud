@@ -1,13 +1,13 @@
 #! /bin/bash
-# Make Instance Ready for Remote Desktop 40 CPU GColab
+# Make Instance Ready for Remote Desktop or RDP
 apt-get update
-rm -rf win7.qcow2 win7 win7.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
+rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O win7.gz http://52.221.192.24/w7.qcow2.gz
-gunzip win7.gz
+wget -O w2012.gz http://18.141.137.154/WS2012-LinggaHosting.gz
+gunzip w2012.gz
 echo "Wait..."
 echo "I m Working Now.."
-mv win7 win7.qcow2
+mv w2012 w2012.img
 wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
@@ -28,15 +28,15 @@ clear
 echo Downloading files from aank.me
 apt-get install qemu-system-x86 -y
 echo "Wait..."
-echo "Starting Windows 7"
-qemu-system-x86_64 -hda win7.qcow2 -m 8G -smp cores=40 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
+echo "Starting Windows"
+qemu-system-x86_64 -hda w2012.img -m 8G -smp cores=40 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 clear
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
-echo "Username: aank"
+echo "Username: Administrator"
 echo "Password: Lingg@H0sting"
-echo "Ctrl + C To Copy"
+echo "===================================="
 echo "===================================="
 echo "Don't Close This Tab"
 echo "Wait 1 - 2 minut for finishing bot"
