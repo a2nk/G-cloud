@@ -1,12 +1,18 @@
-#!/bin/sh
-echo "[+] Installing Xfce, this will take a while"
-apt-get update
-apt-get dist-upgrade -y
-apt-get install -y kali-desktop-xfce xrdp
+#! /bin/bash
+printf "Installing kali ... " >&2
 
-echo "[+] Configuring XRDP to listen to port 3390 (but not starting the service)..."
-sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
+echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
+apt-get -y update 
+apt-get -y --allow-unauthenticated install kali-archive-keyring
+apt-get -y update
 
-wget https://gitlab.com/kalilinux/build-scripts/kali-wsl-chroot/-/raw/master/xfce4.sh
-chmod +x xfce4.sh
-sudo ./xfce4.sh
+apt-get -y install kali-linux-everything
+
+apt-get -y update
+apt-get -y upgrade
+apt-get -y dist-upgrade
+apt-get -y autoremove
+
+printf "Installing kali  Done... " >&2
+
+shutdown now -rf
