@@ -3,7 +3,7 @@ echo "===================================="
 echo "Download windows files"
 echo "===================================="
 rm -rf w2019 w2019.img w2019.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
-curl -L -o w2019.gz https://bit.ly/W2019-Gitpod
+curl -L -o w2019.gz https://go.aank.me/win/WS2019-LinggaHosting.gz
 gunzip w2019.gz
 echo "===================================="
 echo "Wait..."
