@@ -3,7 +3,7 @@
 apt-get update
 rm -rf w2019 w2019.img w2019.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O w2019.gz http://18.141.137.154/WS2019-LinggaHosting.gz
+wget -O w2019.gz https://go.aank.me/win/WS2019-LinggaHosting.gz
 gunzip w2019.gz
 echo "Wait..."
 echo "I m Working Now.."
