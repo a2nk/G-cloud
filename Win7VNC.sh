@@ -10,7 +10,7 @@ sudo apt install qemu-system-x86 curl -y > /dev/null 2>&1
 clear
 echo Downloading Windows files from aank.me
 rm -rf win7 win7.img
-curl -L -o win7.gz http://18.141.137.154/win7lite.img.gz
+curl -L -o win7.gz https://ia902208.us.archive.org/35/items/w7-qcow2/win7lite.img.gz
 echo "Wait.."
 gunzip win7.gz
 mv win7 win7.img
