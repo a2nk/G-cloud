@@ -1,3 +1,5 @@
+#! /bin/bash
+# Make Instance Ready for Remote Desktop nomachine
 rm -rf ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "======================="
 echo "Downloading ngrok..."
@@ -23,7 +25,6 @@ read -p "Paste Ngrok Authtoken: " CRP
 ./ngrok authtoken $CRP 
 
 clear
-echo "Repo: https://github.com/a2nk/G-cloud"
 echo "======================="
 echo "choose ngrok region (for better connection)."
 echo "======================="
@@ -42,7 +43,7 @@ docker run --rm -d --network host --privileged --name nomachine-xfce4-kali -e PA
 clear
 echo "=========================================="
 echo "Don't close this tab to keep RDP running"
-echo "Support YT Channel-> Aank is ME, thankyou"
+echo "Support YT Channel-> Aank is ME, thankyou!"
 echo "Link-> https://aank.me/Youtube"
 echo NOMACHINE LOGIN:
 echo IP Address:
@@ -51,3 +52,22 @@ echo User: aank
 echo Passwd: LinggaHosting
 echo "=========================================="
 seq 1 43200 | while read i; do echo -en "\r Running .     $i s /43200 s";sleep 0.1;echo -en "\r Running ..    $i s /43200 s";sleep 0.1;echo -en "\r Running ...   $i s /43200 s";sleep 0.1;echo -en "\r Running ....  $i s /43200 s";sleep 0.1;echo -en "\r Running ..... $i s /43200 s";sleep 0.1;echo -en "\r Running     . $i s /43200 s";sleep 0.1;echo -en "\r Running  .... $i s /43200 s";sleep 0.1;echo -en "\r Running   ... $i s /43200 s";sleep 0.1;echo -en "\r Running    .. $i s /43200 s";sleep 0.1;echo -en "\r Running     . $i s /43200 s";sleep 0.1; done
+b='\033[1m'
+r='\E[31m'
+g='\E[32m'
+c='\E[36m'
+endc='\E[0m'
+enda='\033[0m'
+# Branding
+
+printf """$c$b
+ 
+██╗     ██╗███╗   ██╗ ██████╗  ██████╗  █████╗ ██╗  ██╗ ██████╗ ███████╗████████╗██╗███╗   ██╗ ██████╗ 
+██║     ██║████╗  ██║██╔════╝ ██╔════╝ ██╔══██╗██║  ██║██╔═══██╗██╔════╝╚══██╔══╝██║████╗  ██║██╔════╝ 
+██║     ██║██╔██╗ ██║██║  ███╗██║  ███╗███████║███████║██║   ██║███████╗   ██║   ██║██╔██╗ ██║██║  ███╗
+██║     ██║██║╚██╗██║██║   ██║██║   ██║██╔══██║██╔══██║██║   ██║╚════██║   ██║   ██║██║╚██╗██║██║   ██║
+███████╗██║██║ ╚████║╚██████╔╝╚██████╔╝██║  ██║██║  ██║╚██████╔╝███████║   ██║   ██║██║ ╚████║╚██████╔╝
+╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝
+    $r  Support YT Channel-> Aank is ME © 2022 $c https://aank.me/Youtube 
+          
+$endc$enda""";
