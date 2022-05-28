@@ -45,8 +45,8 @@ echo "=========================================="
 echo "Don't close this tab to keep RDP running"
 echo "Support YT Channel-> Aank is ME, thankyou!"
 echo "Link-> https://aank.me/Youtube"
-echo NOMACHINE LOGIN:
-echo IP Address:
+echo "=NOMACHINE LOGIN="
+echo "RDP Address:"
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' 
 echo User: aank
 echo Passwd: LinggaHosting
