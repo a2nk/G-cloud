@@ -1,3 +1,11 @@
-z="
-";qBz='bes=';uz='scri';pBz='_pro';NCz='m do';mz='go t';Oz='t to';xz='ike ';jBz='5 ne';sz='com"';tz='"Sub';eBz='tcp_';JBz='outu';HBz='E${N';SBz='ysct';mBz='cp_k';pz='ngga';Rz='G}60';Zz='}lin';Yz='nkLG';kBz='t.ip';iz='ther';YBz='epal';wBz='90:8';ICz=' -v ';Hz='echo';lz='ase ';OCz='rowu';NBz='than';PBz='sudo';GCz='aHos';ZBz='ive_';KCz='/shm';sBz='dock';uBz='un -';KBz='be c';yBz=' USE';Lz='web ';lBz='v4.t';ez='NC} ';qz='host';oz='w.li';hz='or o';Uz='"Sup';Wz=' by ';bBz='=5 n';MBz='el, ';rBz='5';fz='NOVN';xBz='0 -e';Kz='nge ';aBz='time';Az='Aank';cz='ng.c';rz='ing.';ECz='RD=L';Gz='[0m'\''';CCz='e PA';tBz='er r';Fz='NC='\''';ABz='new ';Pz=' ${A';RBz='in/s';Bz='LG='\''';nz='o ww';vBz='p 60';HCz='ting';bz='osti';QCz='ntu-';JCz='/dev';XBz='p_ke';Vz='port';BBz='upda';wz='nd l';CBz='te b';EBz='LG}A';fBz='keep';nBz='eepa';SCz='top-';Qz='ankL';Cz='\033';Xz='${Aa';kz=' ple';dBz='pv4.';Ez='2m'\''';UCz='-vnc';hBz='e_in';dz='om${';QBz=' /sb';TBz='l -w';az='ggah';iBz='tvl=';yz='for ';DBz='y ${';LCz=':/de';MCz='v/sh';ACz='R=aa';OBz='ks!"';FBz='ank ';WBz='4.tc';Dz='[1;3';Mz='view';gz='C, f';LBz='hann';Iz=' -e ';BCz='nk -';PCz='/ubu';GBz='is M';jz=' RDP';VBz='.ipv';RCz='desk';vz='be a';cBz='et.i';FCz='ingg';UBz=' net';IBz='C} y';Nz=' por';DCz='SSWO';oBz='live';TCz='lxde';Tz='NC}"';Sz='90${';Jz='"Cha';gBz='aliv';
-eval "$Az$Bz$Cz$Dz$Ez$z$Fz$Cz$Gz$z$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$z$Hz$Iz$Uz$Vz$Wz$Xz$Yz$Zz$az$bz$cz$dz$ez$fz$gz$hz$iz$jz$kz$lz$mz$nz$oz$pz$qz$rz$sz$z$Hz$Iz$tz$uz$vz$wz$xz$yz$ABz$BBz$CBz$DBz$Az$EBz$FBz$GBz$HBz$IBz$JBz$KBz$LBz$MBz$NBz$OBz$z$PBz$QBz$RBz$SBz$TBz$UBz$VBz$WBz$XBz$YBz$ZBz$aBz$bBz$cBz$dBz$eBz$fBz$gBz$hBz$iBz$jBz$kBz$lBz$mBz$nBz$oBz$pBz$qBz$rBz$z$sBz$tBz$uBz$vBz$wBz$xBz$yBz$ACz$BCz$CCz$DCz$ECz$FCz$GCz$HCz$ICz$JCz$KCz$LCz$MCz$NCz$OCz$PCz$QCz$RCz$SCz$TCz$UCz"
+# Free Google novnc
+#!/bin/sh
+AankLG='\033[1;32m'
+NC='\033[0m'
+sudo apt install screen
+screen -R novnc
+echo -e "Change ${AankLG}port to 6090${NC}"
+echo -e "Support by ${AankLG}linggahosting.com${NC} NOVNC, for other RDP please go to www.linggahosting.com"
+echo -e "Subscribe and like for new update by ${AankLG}Aank is ME${NC} youtube channel"
+sudo /sbin/sysctl -w net.ipv4.tcp_keepalive_time=5 net.ipv4.tcp_keepalive_intvl=5 net.ipv4.tcp_keepalive_probes=5
+docker run -p 6090:80 -e USER=aank -e PASSWORD=LinggaHosting -v /dev/shm:/dev/shm aank999/ubuntu-desktop-lxde-vnc
