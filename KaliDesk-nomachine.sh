@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 stty intr ""
 stty quit ""
 stty susp undef
@@ -29,7 +29,7 @@ read -p "Paste Ngrok Authtoken: " CRP
 ./ngrok authtoken $CRP 
 
 clear
-echo "Repo: https://github.com/kmille36/Docker-Kali-Desktop-NoMachine"
+echo "Repo: https://github.com/a2nk/G-cloud"
 echo "======================="
 echo "choose ngrok region (for better connection)."
 echo "======================="
