@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 # Make Instance Ready for Remote Desktop nomachine
 rm -rf ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "======================="
