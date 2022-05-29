@@ -1,4 +1,5 @@
 #!/bin/bash
+# Free RDP Google
 # Make Instance Ready for Remote Desktop nomachine
 rm -rf ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "======================="
