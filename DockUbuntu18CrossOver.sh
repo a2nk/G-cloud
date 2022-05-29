@@ -2,8 +2,6 @@
 #!/bin/sh
 AankLG='\033[1;32m'
 NC='\033[0m'
-sudo apt install screen
-screen -R novnc
 echo "Installing Ubuntu 18.04 ${AankLG}Environment +  Chrome Web Browser + CrossOver${NC} (1-2 minutes)...."
 sudo docker run --name ubuntu18.04 --privileged --shm-size 1g -d -p 5900:5900 -p 8080:6080 aank999/ubuntu-vnc 
 echo "All done! Please click Web Preview > Preview On ${AankLG}Port 8080${NC} to access your VM!"
