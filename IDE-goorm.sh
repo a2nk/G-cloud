@@ -1,8 +1,12 @@
+#!/bin/sh
+# Free RDP GoormIDE
 sudo adduser aank --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
 echo "aank:LinggaHosting" | sudo chpasswd
 sudo usermod -aG sudo,adm aank
-apt update
+sudo apt install screen
+sudo apt update
 clear
+screen -R a2nk
 echo "===================================="
 echo "Install XFCE"
 echo "Choose Keyboard 31 then 1"
