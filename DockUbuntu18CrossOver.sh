@@ -1,5 +1,3 @@
-# Free Google novnc
-#!/bin/sh
 AankLG='\033[1;32m'
 NC='\033[0m'
 echo "Click Web Preview > Preview On ${AankLG}Port 8080${NC} to access your VM!"
