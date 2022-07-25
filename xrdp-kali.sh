@@ -29,7 +29,7 @@ echo "Username : ubuntu"
 echo "Password : ubuntu"
 echo "RDP Address:"
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
-echo "XRDP Kali IP Address :" && curl --silent --show-error ipconfig.io
+curl --silent --show-error ipconfig.io
 echo "===================================="
 echo "===================================="
 echo "Don't close this tab to keep RDP running"
