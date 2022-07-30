@@ -1,6 +1,5 @@
 #!/bin/sh
-# Free XRDP KaliLinux
-echo -e "$123\n$123\n" | sudo passwd
+# Free XRDP KaliLinux | https://aank.me/Youtube
 rm -rf ngrok  ngrok.zip  ng.sh > /dev/null 2>&1
 wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
