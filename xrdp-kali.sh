@@ -37,7 +37,7 @@ echo "Don't close this tab to keep RDP running"
 echo "Wait to finish bot and next open RDC to connect"
 echo "===================================="
 echo "===================================="
-docker run --rm --shm-size 1g -p 3388:3389 danielguerra/ubuntu-xrdp:kali > /dev/null 2>&1
+docker run --rm --hostname a2nk-kali --shm-size 1g -p 3388:3389 danielguerra/ubuntu-xrdp:kali > /dev/null 2>&1
 b='\033[1m'
 r='\E[31m'
 g='\E[32m'
